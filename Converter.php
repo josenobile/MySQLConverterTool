@@ -286,6 +286,7 @@ class MySQLConverterTool_Converter {
                 'mysql_pconnect'            => new MySQLConverterTool_Function_Connect(), 
                 'mysql_ping'                => new MySQLConverterTool_Function_ConnParam('mysqli_ping'),
                 'mysql_query'               => new MySQLConverterTool_Function_ParReversed('mysqli_query'),
+                'is_resource'               => new MySQLConverterTool_Function_Generic('is_object'),
                 'mysql_real_escape_string'  => new MySQLConverterTool_Function_RealEscapeString('mysqli_real_escape_string'),
                 // mysql_result -- Get result data
                 // PHP_FALIAS(mysql_selectdb,		mysql_select_db,	NULL)
