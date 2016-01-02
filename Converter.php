@@ -753,9 +753,9 @@ class MySQLConverterTool_Converter {
                             break(2);
                         }
                         
-                        if ($text == 'is_resource') {                            
-                            $this->errors[] = array('line' => $lineno, 'msg' => sprintf('[Line %d] You are using is_resource(). Make sure that you do not use it to test for the return value of mysql_query(). mysql_query() returns a resource or a boolean value. mysqli_query() returns an object or a boolean value. If you check the return value of mysql_query like < if (is_resource($res = mysql_query())) [...] > the converted code will fail, because $res will be an object in ext/mysqli."', $lineno, $text));                            
-                        }
+                        //if ($text == 'is_resource') {                            
+                        //    $this->errors[] = array('line' => $lineno, 'msg' => sprintf('[Line %d] You are using is_resource(). Make sure that you do not use it to test for the return value of mysql_query(). mysql_query() returns a resource or a boolean value. mysqli_query() returns an object or a boolean value. If you check the return value of mysql_query like < if (is_resource($res = mysql_query())) [...] > the converted code will fail, because $res will be an object in ext/mysqli."', $lineno, $text));                            
+                        //}
                         // here we fall-through
                     }
                 }
